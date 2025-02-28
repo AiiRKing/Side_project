@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Web Calculator</title>
+    <script>
+        function clearInput() {
+            document.getElementById('expression').value = '';
+            document.getElementById('result').innerText = 'Result: ';
+        }
+    </script>
+</head>
+<body>
+    <h1>Web Calculator</h1>
+    <form action="/calculate" method="POST">
+        <input type="text" id="expression" name="expression" placeholder="Enter expression">
+        <button type="submit">Calculate</button>
+        <button type="button" onclick="clearInput()">Clear</button>
+    </form>
+    <h2 id="result">Result: {{ result }}</h2>
+</body>
+</html>
